@@ -29,7 +29,7 @@ export function SourceEditor({
 
       <div
         className={cn(
-          "relative h-[42vh] overflow-hidden rounded-xl border border-slate-800/90 bg-slate-950 shadow-inner sm:h-[50vh] lg:h-[58vh] xl:h-[calc(100vh-15rem)]",
+          "relative max-h-[calc(100vh-16rem)] min-h-[24rem] overflow-auto rounded-xl border border-slate-800/90 bg-slate-950 shadow-inner",
           hasErrors
             ? "border-destructive/70"
             : "focus-within:ring-2 focus-within:ring-emerald-400/40",
@@ -53,13 +53,11 @@ export function SourceEditor({
               "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
             fontSize: "0.8rem",
             lineHeight: "1.5rem",
-            height: "100%",
             backgroundColor: "rgb(2 6 23)",
             color: "rgb(241 245 249)",
             caretColor: "rgb(110 231 183)",
-            overflow: "auto",
           }}
-          className="h-full w-full overflow-auto rounded-none bg-slate-950 text-slate-100"
+          className="w-full rounded-none bg-slate-950 text-slate-100"
           onKeyDown={(event) => {
             if (event.key === "Tab") {
               event.stopPropagation();
