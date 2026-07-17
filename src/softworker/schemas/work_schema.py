@@ -1,6 +1,7 @@
 from typing import List, Optional
 from pydantic import AliasChoices, Field
 from softworker.schemas.base_schema import ResumeBaseModel
+from softworker.schemas.highlight_group_schema import HighlightGroupSchema
 from softworker.schemas.highlight_schema import HighlightSchema
 
 class WorkSchema(ResumeBaseModel):
@@ -13,3 +14,4 @@ class WorkSchema(ResumeBaseModel):
     end_date: Optional[str] = Field(default=None, alias="endDate")
     summary: Optional[str] = None
     highlights: List[HighlightSchema] = Field(default_factory=list)
+    highlight_groups: List[HighlightGroupSchema] = Field(default_factory=list, alias="highlightGroups")

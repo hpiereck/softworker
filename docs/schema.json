@@ -143,6 +143,30 @@
               "type": "string",
               "description": "e.g. Increased profits by 20% from 2011-2012 through viral advertising"
             }
+          },
+          "highlightGroups": {
+            "type": "array",
+            "description": "Group accomplishments under readable subsection titles",
+            "additionalItems": false,
+            "items": {
+              "type": "object",
+              "additionalProperties": true,
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "e.g. Legacy systems (Java 8 / JSP)"
+                },
+                "items": {
+                  "type": "array",
+                  "description": "Specify multiple accomplishments for this group",
+                  "additionalItems": false,
+                  "items": {
+                    "type": "string",
+                    "description": "e.g. Maintained Java 8 back-end systems using JPA/Hibernate"
+                  }
+                }
+              }
+            }
           }
         }
       }

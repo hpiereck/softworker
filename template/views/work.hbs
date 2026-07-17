@@ -15,6 +15,25 @@
           <p>{{{summary}}}</p>
         </div>
       {{/if}}
+      {{#if highlightGroups}}
+        <div class="highlight-groups" aria-label="{{../i18n.labels.main_activities}}">
+          <div class="highlight-groups-label">{{../i18n.labels.main_activities}}:</div>
+          {{#each highlightGroups}}
+            <div class="highlight-group">
+              {{#if title}}
+                <div class="highlight-group-title">{{title}}</div>
+              {{/if}}
+              {{#if items}}
+                <ul class="highlights highlight-group-items">
+                  {{#each items}}
+                    <li><span class="list-bullet">• </span><span class="list-text">{{{this}}}</span></li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
       {{#if highlights}}
         <ul class="highlights">
           {{#each highlights}}

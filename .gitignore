@@ -203,3 +203,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+henrique_cv.pdf
+henrique_cv.json
+docs/examples/henrique_cv.json

@@ -6,6 +6,7 @@ from softworker.schemas.basics_schema import BasicsSchema
 from softworker.schemas.certificate_schema import CertificateSchema
 from softworker.schemas.course_schema import CourseSchema
 from softworker.schemas.education_schema import EducationSchema
+from softworker.schemas.highlight_group_schema import HighlightGroupSchema
 from softworker.schemas.highlight_schema import HighlightSchema
 from softworker.schemas.interest_schema import InterestSchema
 from softworker.schemas.keyword_schema import KeywordSchema
@@ -27,6 +28,7 @@ __all__ = [
     "CertificateSchema",
     "CourseSchema",
     "EducationSchema",
+    "HighlightGroupSchema",
     "HighlightSchema",
     "InterestSchema",
     "KeywordSchema",

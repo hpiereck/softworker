@@ -71,6 +71,7 @@ export const ARRAY_SECTIONS: ArraySectionDefinition[] = [
     createItem: () => ({
       description: '',
       endDate: '',
+      highlightGroups: [],
       highlights: [],
       location: '',
       name: '',

@@ -40,6 +40,11 @@ const basicsSchema = z.object({
   profiles: z.array(basicsProfileSchema).optional(),
 })
 
+const highlightGroupSchema = z.object({
+  title: optionalString,
+  items: stringList.optional(),
+})
+
 const workSchema = z.object({
   name: requiredString,
   description: optionalString,
@@ -50,6 +55,7 @@ const workSchema = z.object({
   endDate: optionalDate,
   summary: optionalString,
   highlights: stringList.optional(),
+  highlightGroups: z.array(highlightGroupSchema).optional(),
 })
 
 const volunteerSchema = z.object({
